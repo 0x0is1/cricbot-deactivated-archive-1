@@ -71,6 +71,6 @@ async def disconnect(ctx):
     await ctx.send('Ok. Bye.')
     await client.logout()
 
-# auth_token = os.environ.get('DISCORD_BOT_TOKEN')
-auth_token = open('api_key.txt', 'r')
-client.run(auth_token.read())
+auth_token = os.environ.get('DISCORD_BOT_TOKEN')
+#auth_token = open('api_key.txt', 'r')
+client.run(auth_token)
