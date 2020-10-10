@@ -1,4 +1,3 @@
-from typing import Iterator
 from dateutil import tz
 from datetime import datetime
 import unicodedata
@@ -117,31 +116,4 @@ def get_live_status(i, soup):
 
     # NOTE: unicode data is used to avoid '/xa0' type of output with the match id
     return main_link, heading.text, title.text, unicodedata.normalize("NFKD", match_id.text), date, place.text, team1.text, team2.text, status.text
-
-
-'''def get_score_card(i, soup):
-    el_values = {}
-    try:
-        title = soup.findAll(
-            'div', {'class': Filter.filter_scorecard_title})[i]
-    except:
-        title = soup.findAll(
-            'div', {'class': Filter.filter_scorecard_title_ext})[i]
-    inning1 = soup.find('div', {'id': 'innings_1'})
-    header_in1 = soup.findAll(
-        'div', {'class': Filter.filter_scorecard_inning_header})[i]
-    header_in2 = soup.findAll(
-        'div', {'class': Filter.filter_scorecard_inning_header})[i+1]
-    el_names = soup.findAll(
-        'div', {'class': Filter.filter_scorecard_el_names})[i]
-    iterator = 0
-    while True:
-        try:
-            el_values[iterator] = inning1.findAll(
-                'div', {'class': Filter.filter_scorecard_el_value})[iterator].text
-            iterator += 1
-        except:
-            break
-    return el_values
-'''
 
