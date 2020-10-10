@@ -12,7 +12,8 @@ base_url = 'https://www.cricbuzz.com/cricket-match/'
 
 class Urls:
     URL1 = base_url + 'live-scores'
-    URL2 = base_url + 'live-scores/upcoming-matches'
+    ##URL2 = base_url + 'live-scores/upcoming-matches'
+    URL2 = 'http://mapps.cricbuzz.com/cbzios/match/30369/scorecard'
     #URL3 = 'https://www.cricbuzz.com/api/html/cricket-scorecard/30350'
     URL3 = 'https://www.cricbuzz.com/api/cricket-match/commentary/30354'
 
@@ -56,7 +57,7 @@ async def schedule(ctx, index_number=0):
         await ctx.send(get_match_schedule(int(index_number), soup(Urls.URL2)))
     except:
         # await ctx.send('No match available for {}'.format(str(index_number)))
-        await ctx.send(soup(Urls.URL1))
+        await ctx.send(soup(Urls.URL2))
 
 
 @client.command()
