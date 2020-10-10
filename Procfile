@@ -1,1 +1,1 @@
-worker: python cricbot.py
+worker: python3 cricbot.py
