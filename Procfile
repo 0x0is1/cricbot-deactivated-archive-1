@@ -1,2 +1,2 @@
-ps:scale worker=1
+ps:scale worker=2
 worker: python3 cricbot.py
