@@ -4,3 +4,6 @@ PyNaCl
 async-timeout
 requests
 bs4
+dateutil
+datetime
+unicodedata
