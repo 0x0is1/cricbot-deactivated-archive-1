@@ -54,9 +54,10 @@ async def winner(ctx):
 async def schedule(ctx, index_number=0):
     try:
         await ctx.send(get_match_schedule(int(index_number), soup(Urls.URL2)))
-    except Exception as e:
+    except:
         # await ctx.send('No match available for {}'.format(str(index_number)))
-        await ctx.send(e)
+        await ctx.send(soup(Urls.URL1))
+
 
 @client.command()
 async def status(ctx):
