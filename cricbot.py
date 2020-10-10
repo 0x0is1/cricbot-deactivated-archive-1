@@ -13,7 +13,7 @@ base_url = 'https://www.cricbuzz.com/cricket-match/'
 class Urls:
     URL1 = base_url + 'live-scores'
     ##URL2 = base_url + 'live-scores/upcoming-matches'
-    URL2 = 'http://mapps.cricbuzz.com/cbzios/match/30369/scorecard'
+    URL2 = 'https://mapps.cricbuzz.com/cbzios/match/30369/scorecard'
     #URL3 = 'https://www.cricbuzz.com/api/html/cricket-scorecard/30350'
     URL3 = 'https://www.cricbuzz.com/api/cricket-match/commentary/30354'
 
