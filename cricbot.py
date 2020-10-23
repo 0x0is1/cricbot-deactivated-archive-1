@@ -39,9 +39,9 @@ async def on_ready():
 async def score(ctx, index_number=0):
     try:
         await ctx.send(get_live_status(int(index_number), soup(Urls.URL1)))
-    except:
-        await ctx.send('No match available at position {}'.format(str(index_number)))
-
+    except Exception as e:
+        #await ctx.send('No match available at position {}'.format(str(index_number)))
+        await ctx.send(e)
 
 @client.command()
 async def winner(ctx):
